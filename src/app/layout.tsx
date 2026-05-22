@@ -1,28 +1,33 @@
+import type { Metadata } from "next";
+import { Montserrat, Outfit } from "next/font/google";
 import "./globals.css";
-import { Metadata } from "next";
-import { Syne, Outfit } from "next/font/google"
 
-const syne = Syne({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["700", "800"],
+  weight: ["100", "200", "300", "400"],
   variable: "--font-display",
 });
 
 const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "500"],
   variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
-  title: "Creative Portfolio | Software Engineer & Designer",
-  description: "Showcasing a blend of software engineering and design expertise, a creative portfolio using Next.js and Gsap animations.",
+  title: "Bishwas Maharjan | Creative Developer",
+  description: "A premium Next.js and GSAP creative portfolio",
 };
 
-export default function RootLayout({children,}: Readonly<{children: React.ReactNode}>) {
-  return ( 
-    <html lang="en" className={`${syne.variable} ${outfit.variable}`}>
-      <body className="antialiased">
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={`${montserrat.variable} ${outfit.variable}`}>
+      <body className="antialiased flex min-h-screen">
+        {/* Background Grid Lines */}
         <div className="grid-overlay">
           <div className="grid-line" />
           <div className="grid-line" />
@@ -34,4 +39,3 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
     </html>
   );
 }
-
