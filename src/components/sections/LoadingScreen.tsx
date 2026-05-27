@@ -50,7 +50,7 @@ export default function LoadingScreen({onComplete}: {onComplete: () => void}) {
 
         //staggered intro 
         tl.to(circleOutlineRef.current,{opacity:1, scale:1, duration:0.9, ease:"back.out(1.4)"}, 0)
-          .to(circleSolidRef.current,{opacity:1, scale:1, duration:0.8, ease:"back.out(1.6)"}, 5)
+          .to(circleSolidRef.current,{opacity:1, scale:1, duration:0.8, ease:"back.out(1.6)"}, 0.1)
           .to(squareRef.current,{opacity:1, scale:1, duration:0.8, ease:"back.out(1.5)", rotation: 0}, 0.2)
           .to(diamondRef.current,{opacity:1, scale:1, duration:0.8, ease:"back.out(2)"}, 0.3)
           .to(smallCircleRef.current,{opacity:1, scale:1, duration: 0.8, ease: "back.out(1.8)"}, 0.35)

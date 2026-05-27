@@ -23,7 +23,8 @@ export default function Home() {
       <Header/>
 
       <main className="relative w-full min-h-screen">
-        <Hero/>
+
+        {!loading && <Hero/>}
 
       </main>
     </>

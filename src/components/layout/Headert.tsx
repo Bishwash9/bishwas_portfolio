@@ -5,7 +5,7 @@ import  Magnetic from "../ui/Magnetic";
 export default function Header() {
     return (
         <header className="fixed top-0 left-0 w-full z-30 flex justify-between items-center px-8 md:px-16 py-8">
-            <div className="font-display text-lg text-(--background) font-light tracking-widest  select-none bg-(--accent-peach)">
+            <div className="font-display text-md text-(--background) font-light tracking-widest  select-none bg-(--accent-peach)">
                 LET'S CONNECT
             </div>
 
